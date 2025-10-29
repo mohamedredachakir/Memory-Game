@@ -48,14 +48,10 @@ twoface.forEach((card) => {
   card.style.order = rnd;
 });
 function gameover() {
+    score = (score*24)/100;
   setTimeout(() => {
-    bigbox.style.transform = "rotate(180deg)";
-    
-    bigbox.innerHTML = "winner winner vegetables dinner! " + " your score is : " + score;
-    box.style.color = "white";  
-    box.style.fontSize = "10rem"; 
-    box.style.fontWeight = "bold"; 
-    box.style.textAlign = "center"; 
-    box.style.padding = "200px";
+     let rlod = confirm('winner winner vegetables dinner... wanna play more ! => your score is :  '+ score +'%');
+        if (rlod == true){
+            location.reload();}
   }, 500);
 }
